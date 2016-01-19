@@ -2,7 +2,7 @@
 JSON.stringify with colors
 
 
-![Screenshot](https://raw.githubusercontent.com/anatolsommer/teselecta/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/anatolsommer/teselecta/master/screenshot.png)
 
 ## Usage:
 ```js
