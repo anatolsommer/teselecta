@@ -18,7 +18,7 @@ text=teselecta({
   }
 });
 
-console.log(json);
+console.log(text);
 ```
 
 ### Change the default colors:
