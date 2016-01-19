@@ -1,0 +1,26 @@
+{
+  "name": "teselecta",
+  "description": "JSON.stringify with colors",
+  "version": "0.0.1-beta",
+  "license": "MIT",
+  "author": "Anatol Sommer <anatol@anatol.at>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anatolsommer/teselecta.git"
+  },
+  "keywords": [
+    "json",
+    "stringify",
+    "color",
+    "colorize",
+    "cli",
+    "terminal",
+    "object"
+  ],
+  "devDependencies": {
+    "mocha": "~2.1.0"
+  },
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}
