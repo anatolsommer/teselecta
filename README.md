@@ -1,7 +1,6 @@
 # teselecta
 JSON.stringify with colors
 
-
 ![Screenshot](https://raw.githubusercontent.com/anatolsommer/teselecta/master/screenshot.png)
 
 ## Usage:
@@ -32,7 +31,10 @@ teselecta.FALSE='red';
 ```
 
 
-## License
+## Tests
+Run tests with `npm test` or generate coverage reports with `npm run test-cov`.
 
+
+## License
 #### MIT
 

@@ -23,7 +23,43 @@ describe('teselecta', function() {
     res+='}';
     assert.equal(teselecta({foo:1, bar:'baz'}), res);
   });
-  it('should make strings green if STRING=green', function() {
+  it('should render an array', function() {
+    var res='{\n';
+    res+='  '+'"'.grey+'arr'.blue.bold+'"'.grey+': [\n';
+    res+='    '+'1'.magenta+',\n';
+    res+='    '+'"'.grey+'2'.cyan+'"'.grey+',\n';
+    res+='    '+'"'.grey+'"'.grey+'\n';
+    res+='  ]\n';
+    res+='}';
+    assert.equal(teselecta({arr:[1,"2",""]}), res);
+  });
+  it('should work with empty arrays and objects', function() {
+    var res='{\n';
+    res+='  '+'"'.grey+'foo'.blue.bold+'"'.grey+': [],\n';
+    res+='  '+'"'.grey+'bar'.blue.bold+'"'.grey+': {}\n';
+    res+='}';
+    assert.equal(teselecta({foo:[], bar:{}}), res);
+    res='{\n';
+    res+='  '+'"'.grey+'foo'.blue.bold+'"'.grey+': {},\n';
+    res+='  '+'"'.grey+'bar'.blue.bold+'"'.grey+': []\n';
+    res+='}';
+    assert.equal(teselecta({foo:{}, bar:[]}), res);
+  });
+  it('should use "spacing" option', function() {
+    var res='  {\n';
+    res+='    '+'"'.grey+'foo'.blue.bold+'"'.grey+': '+'1'.magenta+',\n';
+    res+='    '+'"'.grey+'bar'.blue.bold+'"'.grey+': '+'"'.grey+'baz'.cyan+'"'.grey+'\n';
+    res+='  }';
+    assert.equal(teselecta({foo:1, bar:'baz'}, {spacing:2}), res);
+  });
+  it('should use "prepend" option', function() {
+    var res='  XXX{\n';
+    res+='    '+'"'.grey+'foo'.blue.bold+'"'.grey+': '+'1'.magenta+',\n';
+    res+='    '+'"'.grey+'bar'.blue.bold+'"'.grey+': '+'"'.grey+'baz'.cyan+'"'.grey+'\n';
+    res+='  }';
+    assert.equal(teselecta({foo:1, bar:'baz'}, {spacing:2, prepend:'XXX'}), res);
+  });
+  it('should use custom colors', function() {
     teselecta.STRING='green';
     assert.equal(teselecta('foo'), 'foo'.green);
   });
