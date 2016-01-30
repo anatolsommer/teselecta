@@ -1,3 +1,11 @@
+0.1.0 / 2016-01-30
+==================
+
+  * added more tests
+  * code coverage
+  * added tests in README
+  * bugfixing
+
 0.0.5-beta / 2016-01-23
 =======================
 

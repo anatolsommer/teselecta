@@ -1,7 +1,7 @@
 {
   "name": "teselecta",
   "description": "JSON.stringify with colors",
-  "version": "0.0.5-beta",
+  "version": "0.1.0",
   "license": "MIT",
   "author": "Anatol Sommer <anatol@anatol.at>",
   "repository": {
@@ -17,10 +17,16 @@
     "terminal",
     "object"
   ],
-  "devDependencies": {
-    "mocha": "~2.1.0"
-  },
   "dependencies": {
     "colors": "^1.1.2"
+  },
+  "devDependencies": {
+    "mocha": "~2.1.0",
+    "jshint": "^2.9.1"
+  },
+  "scripts": {
+    "jshint": "jshint --show-non-errors lib/* && echo 'No errors!\n' ; set $?=0",
+    "test": "mocha --check-leaks test/test.js",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha test/test.js"
   }
 }
