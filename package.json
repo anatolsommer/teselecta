@@ -1,7 +1,7 @@
 {
   "name": "teselecta",
   "description": "JSON.stringify with colors",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "author": "Anatol Sommer <anatol@anatol.at>",
   "repository": {
