@@ -8,7 +8,7 @@ describe('teselecta', function() {
     assert.equal(teselecta(42), '42'.magenta);
   });
   it('should make strings cyan', function() {
-    assert.equal(teselecta('foo'), 'foo'.cyan);
+    assert.equal(teselecta('foo'), '"'.grey+'foo'.cyan+'"'.grey);
   });
   it('should make true green', function() {
     assert.equal(teselecta(true), 'true'.green);
@@ -27,11 +27,13 @@ describe('teselecta', function() {
     var res='{\n';
     res+='  '+'"'.grey+'arr'.blue.bold+'"'.grey+': [\n';
     res+='    '+'1'.magenta+',\n';
-    res+='    '+'"'.grey+'2'.cyan+'"'.grey+',\n';
+    res+='    '+'"'.grey+'2,3'.cyan+'"'.grey+',\n';
+    res+='    '+'true'.green+',\n';
+    res+='    '+'false'.red+',\n';
     res+='    '+'"'.grey+'"'.grey+'\n';
     res+='  ]\n';
     res+='}';
-    assert.equal(teselecta({arr:[1,"2",""]}), res);
+    assert.equal(teselecta({arr:[1,"2,3",true,false,""]}), res);
   });
   it('should work with empty arrays and objects', function() {
     var res='{\n';
@@ -61,7 +63,7 @@ describe('teselecta', function() {
   });
   it('should use custom colors', function() {
     teselecta.STRING='green';
-    assert.equal(teselecta('foo'), 'foo'.green);
+    assert.equal(teselecta('foo'), '"'.grey+'foo'.green+'"'.grey);
   });
 
 });

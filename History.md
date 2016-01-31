@@ -1,3 +1,9 @@
+0.2.0 / 2016-02-01
+==================
+
+  * added more tests
+  * rewritten to cover some edge cases
+
 0.1.1 / 2016-01-31
 ==================
 
