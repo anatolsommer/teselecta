@@ -11,7 +11,7 @@ describe('teselecta', function() {
     assert.equal(teselecta('foo'), '"'.grey+'foo'.cyan+'"'.grey);
   });
   it('should handle "special" strings', function() {
-    assert.equal(teselecta('"\\"\n\"'), '"'.grey+'"\\"\n\"'.cyan+'"'.grey);
+    assert.equal(teselecta('"\\"\n\"'), '"'.grey+'\\"\\\\\\"\\n\\\"'.cyan+'"'.grey);
   });
   it('should make true green', function() {
     assert.equal(teselecta(true), 'true'.green);
