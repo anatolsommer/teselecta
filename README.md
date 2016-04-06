@@ -20,6 +20,23 @@ text=teselecta({
 console.log(text);
 ```
 
+
+### Produce html code:
+```js
+teselecta.html=true;
+```
+
+To change the class names from `teselecta-*` to `something-*`:
+```js
+teselecta.cssPrefix='something';
+```
+
+To use inline styles instead of classes:
+```js
+teselecta.css='inline';
+```
+
+
 ### Change the default colors:
 ```js
 teselecta.QUOTATION='grey';
