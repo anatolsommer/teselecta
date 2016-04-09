@@ -29,15 +29,15 @@ teselecta.html=true;
 Example css:
 ```css
 .json { font-family: monospace; }
-.json>.teselecta-quotation { color: #444; }
-.json>.teselecta-key { color: #00008b; }
-.json>.teselecta-string { color: #00f; }
-.json>.teselecta-number { color: #800080; }
-.json>.teselecta-true { color: #008000; }
-.json>.teselecta-false { color: #f00; }
+.json>.json-quotation { color: #444; }
+.json>.json-key { color: #00008b; }
+.json>.json-string { color: #00f; }
+.json>.json-number { color: #800080; }
+.json>.json-true { color: #008000; }
+.json>.json-false { color: #f00; }
 ```
 
-To change the class names from `teselecta-*` to `something-*`:
+To change the class names from `json-*` to `something-*`:
 ```js
 teselecta.cssPrefix='something';
 ```
