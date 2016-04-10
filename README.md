@@ -48,6 +48,12 @@ teselecta.css='inline';
 ```
 
 
+### Other options:
+* `indent`: (number), default=2
+* `spacing`: (number)
+* `prepend`: (string)
+
+
 ### Change the default colors:
 ```js
 teselecta.QUOTATION='grey';
