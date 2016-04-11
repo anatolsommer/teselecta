@@ -5,19 +5,40 @@ JSON.stringify with colors
 
 ## Usage:
 ```js
-var teselecta=require('teselecta'), text;
+var teselecta = require('teselecta'), text;
 
-text=teselecta({
+text = teselecta({
   wibbly:'wobbly',
   stuff:['timey', 'wimey'],
   releaseYear:1963,
   tardis:{
     type:'Space-time vessel',
-    chameleonCircuit:{broken:true, works:false},
+    chameleonCircuit:{broken:true, works:false}
   }
 });
 
 console.log(text);
+```
+
+
+```js
+var teselecta = require('teselecta'), html;
+
+teselecta.html = true;
+teselecta.css = 'inline';
+
+html = teselecta({
+  wibbly:'wobbly',
+  stuff:['timey', 'wimey'],
+  releaseYear:1963,
+  tardis:{
+    type:'Space-time vessel',
+    chameleonCircuit:{broken:true, works:false}
+  }
+}, {
+  indent: 4,
+  spacing: 2
+});
 ```
 
 
